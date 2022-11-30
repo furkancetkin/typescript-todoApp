@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var TodoItem_1 = require("./TodoItem");
+var TodoService_1 = require("./TodoService");
+var _todoService = new TodoService_1.TodoService();
+var todos;
+var todo;
+var t = new TodoItem_1.TodoItem(2, 'Play with baby', false, new Date());
+_todoService.saveTodo(t);
+todos = _todoService.getTodos();
+todo = _todoService.getById(4);
+console.log('All Todos : ', todos);
+console.log('One Todo : ', todo);
